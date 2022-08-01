@@ -3,10 +3,10 @@ import React from 'react';
 import { TodoItem } from 'components/TodoItem';
 import { StyledUl } from './styled';
 
-export const TodoList = ({ todos }) => (
+export const TodoList = ({ todoIds }) => (
   <StyledUl>
-    {todos.map((element) => (
-      <TodoItem key={element.id} todo={element} />
+    {todoIds.map((id) => (
+      <TodoItem key={id} id={id} />
     ))}
   </StyledUl>
 );

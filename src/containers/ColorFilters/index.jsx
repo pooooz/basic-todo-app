@@ -1,7 +1,8 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-import { availableColors } from 'store/reducers/filtersSlice';
 import { StyledHeading } from 'components/generalStyled';
+import { selectColors } from 'store/selectors/filterSelectors';
 import {
   ColorFieldset,
   ColorFilterInput,
@@ -9,36 +10,39 @@ import {
   ColorForm,
 } from './styled';
 
-export const ColorFilters = ({ onChange }) => (
-  <section>
-    <StyledHeading>Filter by Color</StyledHeading>
-    <ColorForm>
-      <ColorFieldset>
-        {availableColors.map((color) => {
-          const checked = true;
-          const handleChange = () => {
-            onChange(color);
-          };
+export const ColorFilters = ({ onChange }) => {
+  const colors = useSelector(selectColors);
 
-          return (
-            <ColorFilterLabel
-              key={color}
-              htmlFor={color}
-              isActive={checked}
-              color={color}
-            >
-              <ColorFilterInput
-                type="checkbox"
-                name={color}
-                id={color}
-                checked={checked}
-                onChange={handleChange}
-              />
-              {color[0].toUpperCase() + color.slice(1)}
-            </ColorFilterLabel>
-          );
-        })}
-      </ColorFieldset>
-    </ColorForm>
-  </section>
-);
+  return (
+    <section>
+      <StyledHeading>Filter by Color</StyledHeading>
+      <ColorForm>
+        <ColorFieldset>
+          {colors.map((elem) => {
+            const handleChange = () => {
+              onChange(elem.color);
+            };
+
+            return (
+              <ColorFilterLabel
+                key={elem.color}
+                htmlFor={elem.color}
+                isActive={elem.isChecked}
+                color={elem.color}
+              >
+                <ColorFilterInput
+                  type="checkbox"
+                  name={elem.color}
+                  id={elem.color}
+                  checked={elem.isChecked}
+                  onChange={handleChange}
+                />
+                {elem.color[0].toUpperCase() + elem.color.slice(1)}
+              </ColorFilterLabel>
+            );
+          })}
+        </ColorFieldset>
+      </ColorForm>
+    </section>
+  );
+};

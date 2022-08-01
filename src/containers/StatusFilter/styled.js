@@ -20,6 +20,11 @@ export const StatusButton = styled.button.attrs(() => ({
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
+
+  &:disabled {
+    background-color: #a2a7e7;
+    border: 2px solid #21267c;
+  }
 `;
 
 export const StatusButtonList = styled.ul`
