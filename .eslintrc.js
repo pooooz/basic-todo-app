@@ -16,6 +16,7 @@ module.exports = {
         map: [
           ['components', './components'],
           ['containers', './containers'],
+          ['screens', './screens'],
         ],
         extensions: ['.js', '.jsx', '.json'],
       },
@@ -55,6 +56,7 @@ module.exports = {
     'array-callback-return': 0,
     'default-case': 0,
     'react/prefer-stateless-function': 0,
+    'default-param-last': 0,
   },
   overrides: [
     {
