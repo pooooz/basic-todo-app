@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { selectTodoById } from 'store/selectors/todoSelectors';
 import { availableColors } from 'store/reducers/filtersSlice';
-import { TodoContainer, TodoInfoContainer, TodoText } from './styled';
+import { TodoContainer, TodoInfoContainer, TodoText } from '../styled';
 
 export const TodoItem = ({ id }) => {
   const todo = useSelector((state) => selectTodoById(state, id));
