@@ -18,22 +18,19 @@ export const selectFilteredTodoIds = (state) => {
     .filter((elem) => {
       switch (state.filters.status) {
         case StatusFilters.all: {
-          return (
-            selectedColors.indexOf(elem.color) >= 0 ||
-            (elem.color === 'none' && !selectedColors.length)
-          );
+          return selectedColors.length
+            ? selectedColors.indexOf(elem.color) >= 0
+            : true;
         }
         case StatusFilters.active: {
-          return (
-            (selectedColors.indexOf(elem.color) >= 0 && !elem.completed) ||
-            (elem.color === 'none' && !selectedColors.length && !elem.completed)
-          );
+          return selectedColors.length
+            ? selectedColors.indexOf(elem.color) >= 0 && !elem.completed
+            : !elem.completed;
         }
         case StatusFilters.completed: {
-          return (
-            (selectedColors.indexOf(elem.color) >= 0 && elem.completed) ||
-            (elem.color === 'none' && !selectedColors.length && elem.completed)
-          );
+          return selectedColors.length
+            ? selectedColors.indexOf(elem.color) >= 0 && elem.completed
+            : elem.completed;
         }
       }
     })

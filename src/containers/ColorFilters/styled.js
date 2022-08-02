@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const ColorFilterLabel = styled.label`
   cursor: pointer;
-  margin: 3px 0 0 20px;
+  margin: 5px 0 0 20px;
   position: relative;
+  color: #ffffff;
   &:before {
     cursor: pointer;
     position: absolute;
@@ -12,7 +13,7 @@ export const ColorFilterLabel = styled.label`
     height: 12px;
     border: 3px solid ${({ isActive, color }) => (isActive ? color : '#a4a4a4')};
     border-radius: 50%;
-    left: -20px;
+    left: -25px;
   }
 `;
 

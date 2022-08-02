@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { selectRemainingCount } from 'store/selectors/todoSelectors';
-import { StatusFilter } from 'containers/StatusFilter/Functional';
-import { ColorFilters } from 'containers/ColorFilters/Functional';
-import { RemainingTodos } from 'components/RemainingTodos/Functional';
+import { ClassStatusFilter } from 'containers/StatusFilter/Class';
+import { ClassColorFilters } from 'containers/ColorFilters/Class';
+import { ClassRemainingTodos } from 'components/RemainingTodos/Class';
 import { StyledHeading } from 'containers/generalStyled';
 import { ActionButton, ButtonContainer, SettingsContainer } from '../styled';
 
@@ -47,9 +47,9 @@ class Settings extends React.Component {
             Clear Completed
           </ActionButton>
         </ButtonContainer>
-        <RemainingTodos count={remainingCount} />
-        <StatusFilter onChange={handleStatusFilter} />
-        <ColorFilters onChange={handleColorFilter} />
+        <ClassRemainingTodos count={remainingCount} />
+        <ClassStatusFilter onChange={handleStatusFilter} />
+        <ClassColorFilters onChange={handleColorFilter} />
       </SettingsContainer>
     );
   }

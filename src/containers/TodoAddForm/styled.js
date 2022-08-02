@@ -16,11 +16,13 @@ export const TodoAddButton = styled.button`
   border-radius: 0 10px 10px 0;
   color: #ffffff;
   font-weight: 600;
-  background: #777dc5;
+  background: #942871;
   transition: background 300ms;
+
   &:focus {
     outline: 2px solid #3b47c9;
   }
+
   &:hover {
     background: #424975;
   }
@@ -33,7 +35,7 @@ export const TodoInput = styled.input.attrs(() => ({
   border-radius: 10px 0 0 10px;
   border: none;
   outline: none;
-  padding: 0 5px;
+  padding: 0 0 0 10px;
   font-size: 18px;
   &:focus,
   &:focus + ${TodoAddButton} {
