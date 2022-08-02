@@ -9,7 +9,7 @@ import {
   StatusButton,
   StatusButtonList,
   StatusButtonWrap,
-} from './styled';
+} from '../styled';
 
 export const StatusFilter = ({ onChange }) => {
   const currentStatus = useSelector(selectStatus);

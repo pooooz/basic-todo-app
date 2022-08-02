@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { TodoAddButton, TodoForm, TodoInput } from './styled';
+import { TodoAddButton, TodoForm, TodoInput } from '../styled';
 
 export const TodoAddForm = () => {
   const [inputValue, setInputValue] = useState('');

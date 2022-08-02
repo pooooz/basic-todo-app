@@ -8,7 +8,7 @@ import {
   ColorFilterInput,
   ColorFilterLabel,
   ColorForm,
-} from './styled';
+} from '../styled';
 
 export const ColorFilters = ({ onChange }) => {
   const colors = useSelector(selectColors);
