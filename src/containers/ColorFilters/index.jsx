@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { StyledHeading } from 'components/generalStyled';
+import { StyledHeading } from 'containers/generalStyled';
 import { selectColors } from 'store/selectors/filterSelectors';
 import {
   ColorFieldset,

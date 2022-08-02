@@ -5,7 +5,7 @@ import { selectRemainingCount } from 'store/selectors/todoSelectors';
 import { StatusFilter } from 'containers/StatusFilter';
 import { ColorFilters } from 'containers/ColorFilters';
 import { RemainingTodos } from 'containers/RemainingTodos';
-import { StyledHeading } from 'components/generalStyled';
+import { StyledHeading } from 'containers/generalStyled';
 import { ActionButton, ButtonContainer, SettingsContainer } from './styled';
 
 export const Settings = () => {

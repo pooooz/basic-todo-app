@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledHeading } from 'components/generalStyled';
+import { StyledHeading } from 'containers/generalStyled';
 
 export const RemainingTodos = ({ count }) => {
   const suffix = count === 1 ? '' : 's';

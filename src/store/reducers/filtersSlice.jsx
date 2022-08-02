@@ -5,11 +5,11 @@ export const StatusFilters = {
 };
 
 const colors = [
-  { color: 'green', isChecked: true },
-  { color: 'blue', isChecked: true },
-  { color: 'orange', isChecked: true },
-  { color: 'purple', isChecked: true },
-  { color: 'red', isChecked: true },
+  { color: 'green', isChecked: false },
+  { color: 'blue', isChecked: false },
+  { color: 'orange', isChecked: false },
+  { color: 'purple', isChecked: false },
+  { color: 'red', isChecked: false },
 ];
 
 export const availableColors = colors.map((elem) => elem.color);

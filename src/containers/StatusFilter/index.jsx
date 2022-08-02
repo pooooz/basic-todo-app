@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import { selectStatus } from 'store/selectors/filterSelectors';
 import { StatusFilters } from 'store/reducers/filtersSlice';
-import { StyledHeading } from 'components/generalStyled';
+import { StyledHeading } from 'containers/generalStyled';
 import {
   ButtonContainer,
   StatusButton,
