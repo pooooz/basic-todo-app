@@ -18,8 +18,6 @@ export const selectFilteredTodoIds = (state) => {
     .filter((elem) => {
       switch (state.filters.status) {
         case StatusFilters.all: {
-          console.log(elem.color);
-          console.log(selectedColors);
           return (
             selectedColors.indexOf(elem.color) >= 0 ||
             (elem.color === 'none' && !selectedColors.length)

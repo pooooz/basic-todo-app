@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TodoList } from 'components/TodoList';
+import { TodoList } from 'containers/TodoList';
 import { Settings } from 'containers/Settings';
 import { TodoAddForm } from 'containers/TodoAddForm';
 import { TodoWrap, TodoHeading } from './styled';
