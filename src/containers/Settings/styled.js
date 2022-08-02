@@ -8,6 +8,7 @@ export const SettingsContainer = styled.section`
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #e6e6e6;
+  background: #000000;
 `;
 
 export const ButtonContainer = styled.section`
@@ -21,8 +22,8 @@ export const ActionButton = styled.button.attrs(() => ({
   cursor: pointer;
   margin: 7px 0 0 0;
   padding: 5px;
-  background-color: #4a59e3;
-  border: 2px solid #5765f5;
+  background-color: #a87fd9;
+  border: 2px solid #794ab4;
   border-radius: 15px;
   color: #ffffff;
   font-size: 16px;

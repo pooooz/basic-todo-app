@@ -3,7 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { selectTodoById } from 'store/selectors/todoSelectors';
 import { availableColors } from 'store/reducers/filtersSlice';
-import { TodoContainer, TodoInfoContainer, TodoText } from '../styled';
+import {
+  StyledSelect,
+  TodoContainer,
+  TodoInfoContainer,
+  TodoInput,
+  TodoLabel,
+  TodoText,
+} from '../styled';
 
 export const TodoItem = ({ id }) => {
   const todo = useSelector((state) => selectTodoById(state, id));
@@ -24,25 +31,29 @@ export const TodoItem = ({ id }) => {
   return (
     <TodoContainer>
       <TodoInfoContainer>
-        <label htmlFor={todo.id}>
-          <input
+        <TodoLabel
+          htmlFor={todo.id}
+          isActive={todo.completed}
+          color="limegreen"
+        >
+          <TodoInput
             type="checkbox"
             id={todo.id}
             name="isDone"
             checked={todo.completed}
             onChange={handleCompletion}
           />
-        </label>
+        </TodoLabel>
         <TodoText>{todo.text}</TodoText>
       </TodoInfoContainer>
-      <select value={todo.color} onChange={handleColorChange}>
+      <StyledSelect value={todo.color} onChange={handleColorChange}>
         <option>None</option>
         {availableColors.map((color) => (
           <option key={color} value={color}>
             {color[0].toUpperCase() + color.slice(1)}
           </option>
         ))}
-      </select>
+      </StyledSelect>
     </TodoContainer>
   );
 };

@@ -14,6 +14,7 @@ export const StatusButton = styled.button.attrs(() => ({
 }))`
   cursor: pointer;
   width: 100%;
+  padding: 2px 0;
   background-color: #777dc5;
   border: 2px solid #5765f5;
   border-radius: 15px;
