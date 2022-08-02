@@ -8,7 +8,7 @@ import { Header } from './containers/Header';
 export const App = () => (
   <BrowserRouter basename="/basic-todo-app">
     <Routes>
-      <Route path="/" element={<Header />}>
+      <Route element={<Header />}>
         <Route path="/" element={<Navigate to="/functional" />} />
         <Route path="/functional" element={<Todo />} />
         <Route path="/class" element={<ClassTodo />} />
